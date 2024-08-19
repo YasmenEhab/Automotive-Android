@@ -1,4 +1,10 @@
 # Sato image for rbpi 3 
+```
+//git clone -b kirkstone git://git.yoctoproject.org/poky
+git clone -b kirkstone https://github.com/agherzan/meta-raspberrypi.git
+git clone -b kirkstone https://github.com/openembedded/meta-openembedded.git
+```
+
 
 ## 1 - add new build env
 ```
@@ -35,6 +41,7 @@ ENABLE_UART = "1"
 
 ## 3- build
 ```
+bitbake --runall=fetch core-image-sato
 sudo init 3
 source oe-init-build-env rbpi/
 bitbake -k image-core-sato
